@@ -1,6 +1,6 @@
 <template>
 	<div class="hello">
-		<h1>スマホ分割購入シミュレータ</h1>
+		<h1>スマホ分割購入一括シミュレータ</h1>
 		機種
 		<select v-model="model" @change="deviceChange()">
 			<optgroup :label="cat.name" v-for="cat of models" :key="cat.name">
