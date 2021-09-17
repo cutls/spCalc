@@ -1,0 +1,36 @@
+[
+    {
+        "storeId": "docomo",
+        "storeName": "docomo",
+        "totalPrice": 148896,
+        "splitMonthsWhenProgram": 48,
+        "programJoinFee": 0,
+        "discountWhenNew": 0,
+        "discountWhenMNP": 0,
+        "discountWhenChange": 0,
+        "twoStepsLoan": true,
+        "returnableAfter": 1,
+        "oneStep": 24,
+        "restWhenOneStepPrice": 60720,
+        "restWhenOneStepRate": 0,
+        "ifReturnBeforeByMonth": 800,
+        "ifReturnBeforeTotal": 0
+    },
+    {
+        "storeId": "au",
+        "storeName": "au",
+        "totalPrice": 148925,
+        "splitMonthsWhenProgram": 48,
+        "programJoinFee": 0,
+        "discountWhenNew": 0,
+        "discountWhenMNP": 0,
+        "discountWhenChange": 0,
+        "twoStepsLoan": true,
+        "returnableAfter": 13,
+        "oneStep": 24,
+        "restWhenOneStepPrice": 49680,
+        "restWhenOneStepRate": 0,
+        "ifReturnBeforeByMonth": 0,
+        "ifReturnBeforeTotal": 0
+    }
+]

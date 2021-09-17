@@ -1,0 +1,53 @@
+[
+    {
+        "storeId": "docomo",
+        "storeName": "docomo",
+        "totalPrice": 182160,
+        "splitMonthsWhenProgram": 48,
+        "programJoinFee": 0,
+        "discountWhenNew": 0,
+        "discountWhenMNP": 0,
+        "discountWhenChange": 0,
+        "twoStepsLoan": true,
+        "returnableAfter": 1,
+        "oneStep": 24,
+        "restWhenOneStepPrice": 89760,
+        "restWhenOneStepRate": 0,
+        "ifReturnBeforeByMonth": 1100,
+        "ifReturnBeforeTotal": 0
+    },
+    {
+        "storeId": "au",
+        "storeName": "au",
+        "totalPrice": 170945,
+        "splitMonthsWhenProgram": 48,
+        "programJoinFee": 0,
+        "discountWhenNew": 0,
+        "discountWhenMNP": 0,
+        "discountWhenChange": 0,
+        "twoStepsLoan": true,
+        "returnableAfter": 13,
+        "oneStep": 24,
+        "restWhenOneStepPrice": 78600,
+        "restWhenOneStepRate": 0,
+        "ifReturnBeforeByMonth": 0,
+        "ifReturnBeforeTotal": 0
+    },
+    {
+        "storeId": "SoftBank",
+        "storeName": "SoftBank",
+        "totalPrice": 172080,
+        "splitMonthsWhenProgram": 48,
+        "programJoinFee": 0,
+        "discountWhenNew": 0,
+        "discountWhenMNP": 0,
+        "discountWhenChange": 0,
+        "twoStepsLoan": false,
+        "returnableAfter": 24,
+        "oneStep": 24,
+        "restWhenOneStepPrice": 0,
+        "restWhenOneStepRate": 0,
+        "ifReturnBeforeByMonth": 0,
+        "ifReturnBeforeTotal": 0
+    }
+]

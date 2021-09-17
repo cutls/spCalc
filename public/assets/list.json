@@ -1,0 +1,142 @@
+[
+    {
+        "name": "iPhone 13 128GB",
+        "file": "iPhone13/128GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone 13 256GB",
+        "file": "iPhone13/256GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone 13 512GB",
+        "file": "iPhone13/512GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone 13 mini 128GB",
+        "file": "iPhone13mini/128GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone13 mini 256GB",
+        "file": "iPhone13mini/256GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone 13 mini 512GB",
+        "file": "iPhone13mini/512GB.json",
+        "cat": "iPhone 13"
+    },
+    {
+        "name": "iPhone 13 Pro 128GB",
+        "file": "iPhone13Pro/128GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro 256GB",
+        "file": "iPhone13Pro/256GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro 512GB",
+        "file": "iPhone13Pro/512GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro 1TB",
+        "file": "iPhone13Pro/1TB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro Max 128GB",
+        "file": "iPhone13ProMax/128GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro Max 256GB",
+        "file": "iPhone13ProMax/256GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro Max 512GB",
+        "file": "iPhone13ProMax/512GB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 13 Pro Max 1TB",
+        "file": "iPhone13ProMax/1TB.json",
+        "cat": "iPhone 13 Pro"
+    },
+    {
+        "name": "iPhone 12 64GB",
+        "file": "iPhone12/64GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 128GB",
+        "file": "iPhone12/128GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 256GB",
+        "file": "iPhone12/256GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 mini 64GB",
+        "file": "iPhone12mini/64GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 mini 128GB",
+        "file": "iPhone12mini/128GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 mini 256GB",
+        "file": "iPhone12mini/256GB.json",
+        "cat": "iPhone 12"
+    },
+    {
+        "name": "iPhone 12 Pro 128GB",
+        "file": "iPhone12Pro/128GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "iPhone 12 Pro 256GB",
+        "file": "iPhone12Pro/256GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "iPhone 12 Pro 512GB",
+        "file": "iPhone12Pro/512GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "iPhone 12 Pro Max 128GB",
+        "file": "iPhone12ProMax/128GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "iPhone 12 Pro Max 256GB",
+        "file": "iPhone12ProMax/256GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "iPhone 12 Pro Max 512GB",
+        "file": "iPhone12ProMax/512GB.json",
+        "cat": "iPhone 12 Pro"
+    },
+    {
+        "name": "Galaxy Z Fold3 5G",
+        "file": "Galaxy/ZFold3.json",
+        "cat": "Galaxy"
+    },
+    {
+        "name": "Galaxy Z Flip3 5G",
+        "file": "Galaxy/ZFlip3.json",
+        "cat": "Galaxy"
+    }
+]
