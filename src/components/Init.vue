@@ -9,16 +9,18 @@
 				</option>
 			</optgroup>
 		</select>
-		<form name="carrierSelect">
-			<div v-for="c of carriers" :key="c.storeId" class="checkbox">
-				<input type="checkbox" :id="`${c.storeId}UseProgram`" :value="`${c.storeId}UseProgram`" name="carrier" checked />
-				<label :for="`${c.storeId}UseProgram`">{{ c.storeName }}({{ c.splitMonthsWhenProgram }}回分割)</label>
-				<input type="checkbox" :id="`${c.storeId}1`" :value="`${c.storeId}1`" name="carrier" />
-				<label :for="`${c.storeId}1`">{{ c.storeName }}(一括)</label>
+		<form name="carrierSelect" class="fullWidth left">
+			<div>
+				<div v-for="c of carriers" :key="c.storeId" class="checkbox">
+					<input type="checkbox" :id="`${c.storeId}UseProgram`" :value="`${c.storeId}UseProgram`" name="carrier" checked />
+					<label :for="`${c.storeId}UseProgram`">{{ c.storeName }}({{ c.splitMonthsWhenProgram }}回分割)</label>
+					<input type="checkbox" :id="`${c.storeId}1`" :value="`${c.storeId}1`" name="carrier" />
+					<label :for="`${c.storeId}1`">{{ c.storeName }}(一括)</label>
+				</div>
 			</div>
 		</form>
 		<form name="typeSelect">
-			<input type="radio" id="new" value="new" name="type"  />
+			<input type="radio" id="new" value="new" name="type" />
 			<label for="new">新規契約</label>
 			<input type="radio" id="mnp" value="mnp" name="type" />
 			<label for="mnp">MNP</label>
@@ -113,8 +115,8 @@ export default Vue.extend({
 				for (const t of types) {
 					const ta = t.value
 					if (!t.checked) continue
-					if(ta === 'mnp')type = 'discountWhenMNP'
-					if(ta === 'change')type = 'discountWhenChange'
+					if (ta === 'mnp') type = 'discountWhenMNP'
+					if (ta === 'change') type = 'discountWhenChange'
 				}
 				const discount = c[type]
 				const totalPrice = c.totalPrice - discount
@@ -234,5 +236,8 @@ input[type='checkbox'] {
 }
 .message {
 	font-weight: bold;
+}
+.left {
+	text-align: left;
 }
 </style>

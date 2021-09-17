@@ -1,13 +1,15 @@
 <template>
 	<div id="app">
 		<Init />
-		<div class="notice">
-			<p><b>最終更新: 2021年9月17日</b></p>
-			<p><b>計算結果は推定値ですので、実際とは異なる場合があります。</b></p>
-			<p>頭金は0円として計算しています。また、本体価格データはオンラインストアの値段です。実店舗では異なる場合があります。</p>
-			<p>適用されていない割引: au 5G機種変更おトク割、楽天モバイル新規MNPのpt還元など</p>
-			<p>楽天モバイルの48回分割は楽天カードでのみ可能で、また機種変更時に必要な手数料3300円はシステム上初期費用として初月に算入しています。</p>
-			<p>(c) 2021 Cutls <a href="https://github.com/cutls/spCalc" target="_blank">GitHub</a>(端末の追加もこちら)</p>
+		<div class="fullWidth">
+			<div class="notice">
+				<p><b>最終更新: 2021年9月17日</b></p>
+				<p><b>計算結果は推定値ですので、実際とは異なる場合があります。</b></p>
+				<p>頭金は0円として計算しています。また、本体価格データはオンラインストアの値段です。実店舗では異なる場合があります。</p>
+				<p>適用されていない割引: au 5G機種変更おトク割、楽天モバイル新規MNPのpt還元など</p>
+				<p>楽天モバイルの48回分割は楽天カードでのみ可能で、また機種変更時に必要な手数料3300円はシステム上初期費用として初月に算入しています。</p>
+				<p>(c) 2021 Cutls <a href="https://github.com/cutls/spCalc" target="_blank">GitHub</a>(端末の追加もこちら)</p>
+			</div>
 		</div>
 	</div>
 </template>
@@ -38,8 +40,15 @@ export default Vue.extend({
 	border: 1px solid;
 	padding: 10px;
 	margin-top: 20px;
+	max-width: 100%;
+	width: 700px;
 }
 .notice p {
 	margin: 0;
+}
+.fullWidth {
+	display: flex;
+	width: 100vw;
+	justify-content: center;
 }
 </style>
