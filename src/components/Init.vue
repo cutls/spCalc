@@ -17,6 +17,14 @@
 				<label :for="`${c.storeId}1`">{{ c.storeName }}(一括)</label>
 			</div>
 		</form>
+		<form name="typeSelect">
+			<input type="radio" id="new" value="new" name="type"  />
+			<label for="new">新規契約</label>
+			<input type="radio" id="mnp" value="mnp" name="type" />
+			<label for="mnp">MNP</label>
+			<input type="radio" id="change" value="change" name="type" checked />
+			<label for="change">機種変更</label>
+		</form>
 		<div><input type="number" v-model="useFor" />か月使用</div>
 		<button @click="calc()" type="button">計算</button>
 		<div id="result">
@@ -100,6 +108,16 @@ export default Vue.extend({
 				const pureStoreName = ca.replace('UseProgram', '').replace('1', '')
 				const c = this.getCarrierData(pureStoreName)
 				const obj = {} as Price
+				const types = (document as any).typeSelect.type
+				let type = 'discountWhenNew' as 'discountWhenNew' | 'discountWhenMNP' | 'discountWhenChange'
+				for (const t of types) {
+					const ta = t.value
+					if (!t.checked) continue
+					if(ta === 'mnp')type = 'discountWhenMNP'
+					if(ta === 'change')type = 'discountWhenChange'
+				}
+				const discount = c[type]
+				const totalPrice = c.totalPrice - discount
 				if (ca.includes('UseProgram')) {
 					const useFor = this.useFor >= c.returnableAfter || !c.returnableAfter ? this.useFor : c.returnableAfter
 					if (this.useFor < c.returnableAfter && c.returnableAfter) obj.message = `${c.returnableAfter}か月(返却までの最低利用期間)以上利用したときの計算結果です。`
@@ -107,13 +125,13 @@ export default Vue.extend({
 					obj.requiredReturn = requiredReturn
 					obj.name = `${c.storeName}(${c.splitMonthsWhenProgram}回分割)`
 					//2段階であれば残価を引いてそれを分割する
-					const monthly1 = c.twoStepsLoan ? (c.totalPrice - (c.restWhenOneStepPrice || c.restWhenOneStepRate * c.totalPrice)) / (c.oneStep - 1) : c.totalPrice / c.splitMonthsWhenProgram
+					const monthly1 = c.twoStepsLoan ? (totalPrice - (c.restWhenOneStepPrice || c.restWhenOneStepRate * c.totalPrice)) / (c.oneStep - 1) : c.totalPrice / c.splitMonthsWhenProgram
 					obj.first = monthly1 + c.programJoinFee
 
 					obj.monthly1 = monthly1
 					//2段階で再分割前に終了したとき
 					if (c.twoStepsLoan && useFor < c.oneStep) {
-						const lastBefore = c.totalPrice - (c.restWhenOneStepPrice || c.restWhenOneStepRate * c.totalPrice) - useFor * monthly1
+						const lastBefore = totalPrice - (c.restWhenOneStepPrice || c.restWhenOneStepRate * totalPrice) - useFor * monthly1
 						const last = lastBefore - (c.ifReturnBeforeTotal || c.ifReturnBeforeByMonth * (c.oneStep - 1 - useFor))
 						obj.last = last < 1 ? 0 : last
 						obj.monthly2Str = `${c.oneStep}か月まで支払う場合`
@@ -122,7 +140,7 @@ export default Vue.extend({
 					}
 					//2段階で再度分割されたとき
 					if (c.twoStepsLoan && useFor >= c.oneStep) {
-						const rest = c.restWhenOneStepPrice || c.restWhenOneStepRate * c.totalPrice
+						const rest = c.restWhenOneStepPrice || c.restWhenOneStepRate * totalPrice
 						const monthly2 = rest / (c.splitMonthsWhenProgram - c.oneStep)
 						obj.monthly2 = monthly2
 						obj.monthly2Str = `${c.oneStep + 1}か月目以降`
@@ -138,15 +156,15 @@ export default Vue.extend({
 					//通常の分割で、返却が不要な場合
 					if (!c.twoStepsLoan && !requiredReturn) {
 						const useForMax = useFor > c.splitMonthsWhenProgram ? c.splitMonthsWhenProgram : useFor
-						obj.last = c.totalPrice - monthly1 * useForMax
-						obj.total = c.totalPrice + c.programJoinFee
+						obj.last = totalPrice - monthly1 * useForMax
+						obj.total = totalPrice + c.programJoinFee
 					}
 				} else {
 					obj.name = `${c.storeName}(一括)`
-					obj.first = c.totalPrice
+					obj.first = totalPrice
 					obj.monthly1 = 0
 					obj.last = 0
-					obj.total = c.totalPrice
+					obj.total = totalPrice
 					obj.requiredReturn = false
 				}
 				prices.push(obj)

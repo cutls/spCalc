@@ -6,7 +6,7 @@
         "splitMonthsWhenProgram": 48,
         "programJoinFee": 0,
         "discountWhenNew": 0,
-        "discountWhenMNP": 0,
+        "discountWhenMNP": 22000,
         "discountWhenChange": 0,
         "twoStepsLoan": true,
         "returnableAfter": 1,
